@@ -1,0 +1,10 @@
+package main
+
+import (
+	"os"
+	app "github.com/jasondborneman/strtpr/StrtprApp"
+)
+
+func main() {
+	app.Run(os.Getenv("DO_TWEET") == "true")
+}

@@ -1,0 +1,136 @@
+[
+    {
+        "meta": {
+            "id": "carrot",
+            "uuid": "f57dfd4f-13d1-4db1-b9ef-19c2131fb864",
+            "sort": "031119000",
+            "src": "collegiate",
+            "section": "alpha",
+            "stems": [
+                "carrot",
+                "carrots"
+            ],
+            "offensive": false
+        },
+        "hwi": {
+            "hw": "car*rot",
+            "prs": [
+                {
+                    "mw": "\u02c8ker-\u0259t",
+                    "sound": {
+                        "audio": "carrot01",
+                        "ref": "c",
+                        "stat": "1"
+                    }
+                },
+                {
+                    "mw": "\u02c8ka-r\u0259t"
+                }
+            ]
+        },
+        "fl": "noun",
+        "def": [
+            {
+                "sseq": [
+                    [
+                        [
+                            "sense",
+                            {
+                                "sn": "1",
+                                "dt": [
+                                    [
+                                        "text",
+                                        "{bc}a biennial herb ({it}Daucus carota{\/it} of the family Umbelliferae, the carrot family) with a usually orange spindle-shaped edible root"
+                                    ]
+                                ],
+                                "sdsense": {
+                                    "sd": "also",
+                                    "dt": [
+                                        [
+                                            "text",
+                                            "{bc}its root"
+                                        ]
+                                    ]
+                                }
+                            }
+                        ]
+                    ],
+                    [
+                        [
+                            "sense",
+                            {
+                                "sn": "2",
+                                "dt": [
+                                    [
+                                        "text",
+                                        "{bc}a reward or advantage offered especially as an inducement "
+                                    ],
+                                    [
+                                        "vis",
+                                        [
+                                            {
+                                                "t": "The company offered a {wi}carrot{\/wi} in the form of additional vacation time to workers who met their deadlines."
+                                            }
+                                        ]
+                                    ]
+                                ]
+                            }
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "et": [
+            [
+                "text",
+                "Middle French {it}carotte{\/it}, from Late Latin {it}carota{\/it}, from Greek {it}kar\u014dton{\/it}"
+            ]
+        ],
+        "date": "1533{ds||1||}",
+        "shortdef": [
+            "a biennial herb (Daucus carota of the family Umbelliferae, the carrot family) with a usually orange spindle-shaped edible root; also : its root",
+            "a reward or advantage offered especially as an inducement"
+        ]
+    },
+    {
+        "meta": {
+            "id": "wild carrot",
+            "uuid": "daa8508d-a2e9-43fa-8f21-d6e9de981ae2",
+            "sort": "230160500",
+            "src": "collegiate",
+            "section": "alpha",
+            "stems": [
+                "wild carrot",
+                "wild carrots"
+            ],
+            "offensive": false
+        },
+        "hwi": {
+            "hw": "wild carrot"
+        },
+        "fl": "noun",
+        "def": [
+            {
+                "sseq": [
+                    [
+                        [
+                            "sense",
+                            {
+                                "dt": [
+                                    [
+                                        "text",
+                                        "{bc}{sx|queen anne\u0027s lace||}"
+                                    ]
+                                ]
+                            }
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "date": "circa 1538",
+        "shortdef": [
+            "queen anne\u0027s lace"
+        ]
+    }
+]
