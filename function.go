@@ -1,4 +1,4 @@
-package strtpr
+package Strtpr
 
 import (
 	"encoding/json"
