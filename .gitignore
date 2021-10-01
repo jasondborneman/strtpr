@@ -1,2 +1,3 @@
-0envs.sh
+.envs.yaml
 strtpr
+deploy.sh
