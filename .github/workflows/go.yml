@@ -28,7 +28,7 @@ jobs:
       with:
         project_id: strtpr
         name: strtpr
-        runtime: go113
+        runtime: go116
         entry_point: Strtpr 
         env_vars: ${{ secrets.ENV_VARS }} 
         credentials: ${{ secrets.GCP_CRED }}
