@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -37,7 +37,7 @@ func IsPartOfSpeech(word string, partOfSpeech string) (bool, string, error) {
 	}
 
 	wordInfo := &dw.WordInfo{}
-	body, _ := ioutil.ReadAll(resp.Body)
+	body, _ := io.ReadAll(resp.Body)
 	if strings.HasPrefix(string(body), `["`) {
 		message := fmt.Sprintf("Word not found in dictionary: %s", word)
 		return false, word, errors.New(message)

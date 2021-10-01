@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"time"
@@ -33,7 +33,7 @@ func GetWordByPartOfSpeech(partOfSpeech string) (string, error) {
 		return "", errors.New(message)
 	}
 	chosenWord := ""
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 
 	if err != nil {
 		log.Fatal(fmt.Sprintf("Error converting Random Word API body to string. %s", err))
