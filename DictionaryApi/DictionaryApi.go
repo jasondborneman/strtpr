@@ -1,10 +1,10 @@
-package DictionaryApi 
+package DictionaryApi
 
 import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -17,7 +17,7 @@ import (
 var dictApiUrl = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/"
 var dictApiKey = os.Getenv("DICT_APIKEY")
 
-func IsPartOfSpeech(word string, partOfSpeech string) (bool, string, error){
+func IsPartOfSpeech(word string, partOfSpeech string) (bool, string, error) {
 	url := fmt.Sprintf("%s%s?key=%s", dictApiUrl, word, dictApiKey)
 	var netClient = &http.Client{
 		Timeout: time.Second * 10,
@@ -37,7 +37,7 @@ func IsPartOfSpeech(word string, partOfSpeech string) (bool, string, error){
 	}
 
 	wordInfo := &dw.WordInfo{}
-	body, _ := io.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 	if strings.HasPrefix(string(body), `["`) {
 		message := fmt.Sprintf("Word not found in dictionary: %s", word)
 		return false, word, errors.New(message)
@@ -51,5 +51,5 @@ func IsPartOfSpeech(word string, partOfSpeech string) (bool, string, error){
 	foundPartOfSpeech := (*wordInfo)[0].Fl
 	finalWord := (*wordInfo)[0].Meta.ID
 	defer resp.Body.Close()
-	return foundPartOfSpeech == partOfSpeech,finalWord,nil
+	return foundPartOfSpeech == partOfSpeech, finalWord, nil
 }

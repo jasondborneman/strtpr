@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"time"
@@ -33,7 +33,7 @@ func GetWordByPartOfSpeech(partOfSpeech string) (string, error) {
 		return "", errors.New(message)
 	}
 	chosenWord := ""
-	body, err := io.ReadAll(resp.Body)
+	body, err := ioutil.ReadAll(resp.Body)
 
 	if err != nil {
 		log.Fatal(fmt.Sprintf("Error converting Random Word API body to string. %s", err))
@@ -56,7 +56,7 @@ func GetWordByPartOfSpeech(partOfSpeech string) (string, error) {
 	return chosenWord, nil
 }
 
-func respToArr(resp string) ([]string) {
+func respToArr(resp string) []string {
 	var arr []string
 	_ = json.Unmarshal([]byte(resp), &arr)
 	return arr
