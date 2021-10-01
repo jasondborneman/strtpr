@@ -1,0 +1,5 @@
+functions:
+  first:
+    handler: Strtpr
+    events:
+      - http: path
