@@ -2,7 +2,7 @@ name: Go
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
-        go-version: 1.15
+        go-version: 1.16
 
     - id: Build
       name: Build
@@ -28,7 +28,7 @@ jobs:
       with:
         project_id: strtpr
         name: strtpr
-        runtime: go113
+        runtime: go116
         entry_point: Strtpr 
         env_vars: ${{ secrets.ENV_VARS }} 
         credentials: ${{ secrets.GCP_CRED }}
