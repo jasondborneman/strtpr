@@ -1,4 +1,6 @@
 # strtpr
+[![Go](https://github.com/jasondborneman/strtpr/actions/workflows/go.yml/badge.svg)](https://github.com/jasondborneman/strtpr/actions/workflows/go.yml)
+
 Pulls random words out of an API, then uses the Merriam-Webster API to chck for part of speech and build stupid startup ideas and names.
 
 ## APIs Used
